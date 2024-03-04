@@ -1,0 +1,13 @@
+{
+  "name": "@clearsight/source",
+  "version": "0.0.0",
+  "license": "MIT",
+  "scripts": {},
+  "private": true,
+  "dependencies": {},
+  "devDependencies": {
+    "@nx/js": "18.1.0",
+    "@nx/workspace": "18.1.0",
+    "nx": "18.1.0"
+  }
+}

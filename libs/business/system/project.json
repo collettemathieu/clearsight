@@ -1,0 +1,23 @@
+{
+  "name": "business-system",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/business/system/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:swc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/business/system",
+        "main": "libs/business/system/src/index.ts",
+        "tsConfig": "libs/business/system/tsconfig.lib.json",
+        "assets": ["libs/business/system/*.md"]
+      }
+    },
+    "publish": {
+      "command": "node tools/scripts/publish.mjs business-system {args.ver} {args.tag}",
+      "dependsOn": ["build"]
+    }
+  },
+  "tags": ["business/system"]
+}

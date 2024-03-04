@@ -1,0 +1,27 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "rootDir": ".",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "es2015",
+    "module": "esnext",
+    "lib": ["es2020", "dom"],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@clearsight/business-component": [
+        "libs/business/component/src/index.ts"
+      ],
+      "@clearsight/business-event": ["libs/business/event/src/index.ts"],
+      "@clearsight/business-log": ["libs/business/log/src/index.ts"],
+      "@clearsight/business-system": ["libs/business/system/src/index.ts"]
+    }
+  },
+  "exclude": ["node_modules", "tmp"]
+}

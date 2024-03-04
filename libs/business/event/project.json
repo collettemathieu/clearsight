@@ -1,0 +1,23 @@
+{
+  "name": "business-event",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/business/event/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:swc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/business/event",
+        "main": "libs/business/event/src/index.ts",
+        "tsConfig": "libs/business/event/tsconfig.lib.json",
+        "assets": ["libs/business/event/*.md"]
+      }
+    },
+    "publish": {
+      "command": "node tools/scripts/publish.mjs business-event {args.ver} {args.tag}",
+      "dependsOn": ["build"]
+    }
+  },
+  "tags": ["business/event"]
+}

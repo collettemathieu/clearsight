@@ -1,0 +1,1 @@
+export { LogEntity } from './lib/entities/log.entity';

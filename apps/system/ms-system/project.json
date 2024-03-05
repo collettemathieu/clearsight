@@ -1,0 +1,55 @@
+{
+  "name": "system-ms-system",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/system/ms-system/src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:swc",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "defaultConfiguration": "production",
+      "options": {
+        "target": "node",
+        "compiler": "swc",
+        "swcrc": "apps/system/ms-system/.swcrc",
+        "outputPath": "dist/apps/system/ms-system",
+        "main": "apps/system/ms-system/src/main.ts",
+        "tsConfig": "apps/system/ms-system/tsconfig.app.json",
+        "assets": [
+          "apps/system/ms-system/src/assets"
+        ]
+      },
+      "configurations": {
+        "development": {
+          "swcrc": "apps/system/ms-system/.swcrc"
+        },
+        "production": {
+          "swcrc": "apps/system/ms-system/.swcrc",
+          "extractLicenses": true,
+					"fileReplacements": [
+					],
+					"inspect": false,
+					"optimization": true
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nx/js:node",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "system-ms-system:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "system-ms-system:build:development"
+        },
+        "production": {
+          "buildTarget": "system-ms-system:build:production"
+        }
+      }
+    }
+  },
+  "tags": []
+}

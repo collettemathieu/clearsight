@@ -1,1 +1,1 @@
-export {EventEntity} from './lib/entities/event.entity';
+export {Event} from './lib/entities/event';

@@ -1,11 +1,12 @@
 {
   "jsc": {
-    "target": "es2022",
+    "target": "esnext",
     "parser": {
       "syntax": "typescript",
       "decorators": true,
       "dynamicImport": true
     },
+    "baseUrl": "./",
     "transform": {
       "decoratorMetadata": true,
       "legacyDecorator": true
@@ -15,11 +16,15 @@
     "loose": true
   },
   "module": {
-    "type": "commonjs",
+    "type": "es6",
     "strict": true,
     "strictMode": true, 
-    "lazy": true
+    "lazy": false,
+    "noInterop": false,
+    "resolveFully": true,
+    "ignoreDynamic": true
   },
+  "isModule": true,
   "sourceMaps": true,
   "minify": true,
   "exclude": [

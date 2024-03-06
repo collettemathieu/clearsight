@@ -1,1 +1,1 @@
-export { LogEntity } from './lib/entities/log.entity';
+export { Log } from './lib/entities/log';

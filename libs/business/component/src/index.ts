@@ -1,1 +1,1 @@
-export { ComponentEntity, ComponentEntityHealthState } from './lib/entities/component';
+export { Component, ComponentHealthState } from './lib/entities/component';

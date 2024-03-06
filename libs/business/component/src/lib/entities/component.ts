@@ -1,9 +1,9 @@
-export interface ComponentEntity {
+export interface Component {
     description: string;
-    healthState: ComponentEntityHealthState;
+    healthState: ComponentHealthState;
     id: string; // uuid
     message: string;
     name: string;
     }
 
-    export type ComponentEntityHealthState = "alive" | "sick" | "dead" | "unknown";
+    export type ComponentHealthState = "alive" | "sick" | "dead" | "unknown";

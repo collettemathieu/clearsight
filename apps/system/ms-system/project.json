@@ -19,7 +19,8 @@
         "tsConfig": "apps/system/ms-system/tsconfig.app.json",
         "assets": [
           "apps/system/ms-system/src/assets"
-        ]
+        ],
+        "isolatedConfig": true
       },
       "configurations": {
         "development": {
